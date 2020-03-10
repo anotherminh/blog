@@ -3,37 +3,6 @@ layout: post
 title: 'GEB: Part I'
 ---
 
-Part I is introduces the reader to formal systems, starting from a simple MU-puzzle to Propositional Calculus, then finally to Typographical Number Theory (TNT).
-
-### The MU-Puzzle
-
-Can you produce the string 'MU' from the starting 'MI', given the following rules:
-
-+ Rule I: If the string ends in the letter 'I', you can add a 'U' at the end
-+ Rule II: If you have the string Mx, you can create Mxx.
-  - 'x' here is a stand-in for any substring containing any character.
-  - e.g. MIIU => MIIU + IIU => MIIUIIU
-+ Rule III: Replace any substring 'III' with the letter 'U'.
-  - MIII => MU
-  - MIIII => MUI or MIU
-+ Rule IV: You can delete the 'UU' substring if it occurs anywhere in the string.
-  - MIUU => MI
-  - UUU => U
-
-One way to go about answering this question is to try and generate all the possible theorems from the given axiom & rules, and see if MU ever comes up. Something like this:
-
-![MU]({{ site.baseurl }}/assets/mu.png)
-
-As you can see, the tree would grow infinitely, and there's no guarantee that MU will show up in the tree.
-
-The MU puzzle is a simple example of a formal system. Formal systems have a couple of things:
-- Symbols: A list of valid symbols/characters for the system
-- Axioms: A starting string of valid symbols -- the top node in our graph above. For the MU-system, we only have one axiom, the string 'MI'.
-- Rules (also called rules of production or rules of inference): rules tells ushow to manipulate/generate new strings. In the MU-system, we have 4 rules, some of which lengthen and some of which shorten the given string to produce new strings.
-- Theorems: Strings of symbols. Any string can be a theorem if it can be derived from the axiom using the given rules. To derive is to demonstrate, line-by-line, how applying different rules of the system can take us from the axiom to some new string.
-
-So the initial question "Can you produce 'MU' from 'MI' using the four given rules?" is equivalent to asking: "Is the string MU a theorem of the MIU-system?"
-
 ### Propositional Calculus
 
 ### TNT
