@@ -18,7 +18,7 @@ This project is installed with [jekyll-compose](https://github.com/jekyll/jekyll
 
 You can create a new post as a draft by running the following command:
 ```
-be jekyll draft "My New Post"
+bundle exec jekyll draft "My New Post"
 ```
 
 To publish your draft when ready:
